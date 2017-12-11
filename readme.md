@@ -14,16 +14,37 @@ or
 ## Usage ##
 
 ```js
-var center = require('are-intervals-overlapping');
+var areIntervalsOverlappings = require('are-intervals-overlapping');
 // or
-import center from 'are-intervals-overlapping';
+import areIntervalsOverlappings from 'are-intervals-overlapping';
 
-var points = polygon.getAttribute('points');
-// e.g. "28,224 256,224 256,352 128,352"
+// For overlapping time intervals:
+areIntervalsOverlapping(
+  {start: new Date(2014, 0, 10), end: new Date(2014, 0, 20)},
+  {start: new Date(2014, 0, 17), end: new Date(2014, 0, 21)}
+)
+//=> true
 
-var center = center(points);
-// e.g. { x: 192, y: 288 }
+// For non-overlapping time intervals:
+areIntervalsOverlapping(
+  {start: new Date(2014, 0, 10), end: new Date(2014, 0, 20)},
+  {start: new Date(2014, 0, 21), end: new Date(2014, 0, 22)}
+)
+//=> false
 
+// Using the inclusive option:
+areIntervalsOverlapping(
+  {start: new Date(2014, 0, 10), end: new Date(2014, 0, 20)},
+  {start: new Date(2014, 0, 20), end: new Date(2014, 0, 24)}
+)
+//=> false
+
+areIntervalsOverlapping(
+  {start: new Date(2014, 0, 10), end: new Date(2014, 0, 20)},
+  {start: new Date(2014, 0, 20), end: new Date(2014, 0, 24)},
+  {inclusive: true}
+)
+//=> true
 ```
 
 ## License ##
