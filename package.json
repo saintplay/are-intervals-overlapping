@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saintplay/saintplay/are-intervals-overlapping.git"
+    "url": "git+https://github.com/saintplay/are-intervals-overlapping.git"
   },
   "bugs": {
-    "url": "https://github.com/saintplay/saintplay/are-intervals-overlapping/issues"
+    "url": "https://github.com/saintplay/are-intervals-overlapping/issues"
   },
   "main": "dist/are-intervals-overlapping.min.js",
   "typings": "index.d.ts",
