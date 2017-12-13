@@ -1,6 +1,6 @@
 {
   "name": "are-intervals-overlapping",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check if two intervals are overlapping - Logic from date-fns",
   "keywords": [
     "dates",
